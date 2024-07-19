@@ -1,153 +1,165 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="vqq11CWNVkLVnZvjCeZReKc8-FRmgxek2SOWjr35CbY" />
     <link rel="shortcut icon" type="image/png" href="android-chrome-512x512.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Q+ Interpreter: Advanced Postfix Calculator 🧮 | Esmail Sarhadi</title>
+    <meta name="description" content="Explore Q+ Interpreter: A powerful Python-based postfix notation calculator. Features arithmetic operations, trigonometric functions, and variable storage. 🚀">
+    <meta name="keywords" content="Q+ Interpreter, Postfix Notation, Calculator, Python, Stack-based, Mathematical Operations">
+    <meta name="author" content="Esmail Sarhadi">
+    
+    <meta property="og:title" content="Q+ Interpreter: Advanced Postfix Calculator 🧮">
+    <meta property="og:description" content="Discover Q+ Interpreter: A robust Python-based postfix notation calculator with advanced mathematical capabilities. 🚀">
+    <meta property="og:image" content="https://esmail-sarhadi.github.io/Q-Interpreter/q-interpreter-og-image.png">
+    <meta property="og:url" content="https://esmail-sarhadi.github.io/Q-Interpreter/">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Q+ Interpreter: Advanced Postfix Calculator 🧮">
+    <meta name="twitter:description" content="Explore Q+ Interpreter: A powerful Python-based postfix notation calculator. Features arithmetic operations, trigonometric functions, and more! 🚀">
+    <meta name="twitter:image" content="https://esmail-sarhadi.github.io/Q-Interpreter/q-interpreter-twitter-image.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 30px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .feature-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .feature-list li:before {
+            content: '🔹';
+            position: absolute;
+            left: 0;
+        }
+        .example-code {
+            background-color: #f4f4f4;
+            border-left: 3px solid #2980b9;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .icon-feature {
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="animate__animated animate__fadeInDown">Q+ Interpreter 🧮</h1>
+        <p class="animate__animated animate__fadeIn">Welcome to Q+ Interpreter, a powerful Python-based calculator that uses postfix notation (Reverse Polish Notation) to perform various mathematical operations. 🚀</p>
+        
+        <h2 class="animate__animated animate__fadeInLeft">Features 🌟</h2>
+        <ul class="feature-list animate__animated animate__fadeInRight">
+            <li><i class="fas fa-plus-minus icon-feature"></i>Basic arithmetic operations</li>
+            <li><i class="fas fa-square-root-variable icon-feature"></i>Advanced mathematical functions</li>
+            <li><i class="fas fa-superscript icon-feature"></i>Trigonometric calculations</li>
+            <li><i class="fas fa-database icon-feature"></i>Variable storage and usage</li>
+            <li><i class="fas fa-code icon-feature"></i>Custom function implementations</li>
+        </ul>
+        
+        <h2 class="animate__animated animate__fadeInLeft">How It Works 🔍</h2>
+        <p class="animate__animated animate__fadeIn">Q+ Interpreter uses a stack to evaluate postfix expressions, supporting:</p>
+        <ul class="feature-list animate__animated animate__fadeInRight">
+            <li>Number pushing</li>
+            <li>Operation performing</li>
+            <li>Variable assignment</li>
+            <li>Expression evaluation</li>
+        </ul>
+        
+        <h2 class="animate__animated animate__fadeInLeft">Usage Example 💻</h2>
+        <div class="example-code animate__animated animate__fadeIn">
+            <pre><code>> 3 4 +
+Stack after '3': [3.0]
+Stack after '4': [3.0, 4.0]
+Stack after '+': [7.0]
+Result: 7.0
 
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Q-Interpreter | Q+ Interpreter: A custom postfix notation calculator implemented in Python, featuring basic arithmetic operations, trigonometric functions, and variable storage.</title>
-<meta name="generator" content="Jekyll v3.9.5" />
-<meta property="og:title" content="Q-Interpreter" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Q+ Interpreter: A custom postfix notation calculator implemented in Python, featuring basic arithmetic operations, trigonometric functions, and variable storage." />
-<meta property="og:description" content="Q+ Interpreter: A custom postfix notation calculator implemented in Python, featuring basic arithmetic operations, trigonometric functions, and variable storage." />
-<link rel="canonical" href="https://esmail-sarhadi.github.io/Q-Interpreter/" />
-<meta property="og:url" content="https://esmail-sarhadi.github.io/Q-Interpreter/" />
-<meta property="og:site_name" content="Q-Interpreter" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Q-Interpreter" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Q+ Interpreter: A custom postfix notation calculator implemented in Python, featuring basic arithmetic operations, trigonometric functions, and variable storage.","headline":"Q-Interpreter","name":"Q-Interpreter","url":"https://esmail-sarhadi.github.io/Q-Interpreter/"}</script>
-<!-- End Jekyll SEO tag -->
+> x 5 =
+Variable x assigned value: 5.0
 
-    <link rel="stylesheet" href="/Q-Interpreter/assets/css/style.css?v=e518e320a96a3661205ccbadf64ab06a3ba597c1">
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+> x 3 *
+Stack after 'x': [5.0]
+Stack after '3': [5.0, 3.0]
+Stack after '*': [15.0]
+Result: 15.0
 
-<!-- Setup Google Analytics -->
-
-
-
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/Q-Interpreter/favicon.ico" -->
-
-<!-- end custom head snippets -->
-
-  </head>
-  <body>
-    <div class="container-lg px-3 my-5 markdown-body">
-      
-      <h1><a href="https://esmail-sarhadi.github.io/Q-Interpreter/">Q-Interpreter</a></h1>
-      
-
-      <p>Q+ Interpreter
-Q+ Interpreter is a Python-based calculator that uses postfix notation (Reverse Polish Notation) to perform various mathematical operations. This project implements a custom stack-based interpreter for a simple language called Q+.
-Features</p>
-
-<p>Basic arithmetic operations: addition, subtraction, multiplication, division, and exponentiation
-Mathematical functions: square root, logarithm, sine, cosine, and tangent
-Variable assignment and usage
-Custom implementations of mathematical functions without relying on external libraries
-Stack-based evaluation of postfix expressions
-Simple hash table for variable storage</p>
-
-<p>How It Works
-The Q+ Interpreter uses a stack to evaluate postfix expressions. It supports the following operations:</p>
-
-<p>Pushing numbers onto the stack
-Performing operations on the top elements of the stack
-Assigning values to variables
-Using variables in expressions</p>
-
-<p>The interpreter processes input token by token, either pushing values onto the stack or applying operators to the values on top of the stack.
-Usage
-To use the Q+ Interpreter:</p>
-
-<p>Run the script
-Enter expressions in postfix notation at the prompt
-The interpreter will evaluate the expression and display the result</p>
-
-<p>Example usage:
-Copy&gt; 3 4 +
-Stack after ‘3’: [3.0]
-Stack after ‘4’: [3.0, 4.0]
-Stack after ‘+’: [7.0]
-Result: 7.0</p>
-
-<blockquote>
-  <p>x 5 =
-Variable x assigned value: 5.0</p>
-</blockquote>
-
-<blockquote>
-  <p>x 3 *
-Stack after ‘x’: [5.0]
-Stack after ‘3’: [5.0, 3.0]
-Stack after ‘*’: [15.0]
-Result: 15.0</p>
-</blockquote>
-
-<blockquote>
-  <p>90 sin
-Stack after ‘90’: [90.0]
-Stack after ‘sin’: [1.0]
-Result: 1.0
-Implementation Details</p>
-</blockquote>
-
-<p>Stack: A custom implementation of a stack data structure
-HashTable: A simple hash table for storing variables
-QPlusInterpreter: The main interpreter class that handles input processing and expression evaluation
-Custom implementations of mathematical functions: my_sqrt, my_pow, my_log, my_sin, my_cos, my_tan</p>
-
-<p>Limitations</p>
-
-<p>The interpreter assumes well-formed input and may not handle all error cases gracefully
-Trigonometric functions use radians internally but expect input in degrees
-The hash table for variables has a fixed size and uses a simple hashing function</p>
-
-<p>Future Improvements</p>
-
-<p>Implement error handling for malformed expressions
-Add support for multi-character variable names
-Extend the set of supported mathematical functions
-Implement a more sophisticated variable storage system</p>
-
-<h2 id="contributing">Contributing</h2>
-
-<p>Contributions are welcome! If you have suggestions for improvements or bug fixes, please fork the repository and submit a pull request. Ensure your changes are well-documented and tested.</p>
-
-<h2 id="profile">Profile</h2>
-
-<p>Check out my GitHub profile: <a href="https://github.com/Esmail-sarhadi" target="_blank">Esmail Sarhadi</a></p>
-
-<h2 id="project-link">Project Link</h2>
-
-<p>View this project on GitHub: <a href="https://github.com/Esmail-sarhadi/Q-Interpreter" target="_blank">Q-Interpreter</a></p>
-
-<h2 id="license">License</h2>
-
-<p>This project is licensed under the MIT License. See the <a href="/Q-Interpreter/LICENSE">LICENSE</a> file for more details.</p>
-
-<h2 id="donation">Donation</h2>
-
-<p>If you find this project helpful, consider making a donation:</p>
-<p><a href="https://nowpayments.io/donation?api_key=REWCYVC-A1AMFK3-QNRS663-PKJSBD2&amp;source=lk_donation&amp;medium=referral" target="_blank">
-     <img src="https://nowpayments.io/images/embeds/donation-button-black.svg" alt="Crypto donation button by NOWPayments" />
-</a></p>
-
-
-      
-      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
-        This site is open source. <a href="https://github.com/Esmail-sarhadi/Q-Interpreter/edit/main/README.md">Improve this page</a>.
-      </div>
-      
+> 90 sin
+Stack after '90': [90.0]
+Stack after 'sin': [1.0]
+Result: 1.0</code></pre>
+        </div>
+        
+        <h2 class="animate__animated animate__fadeInLeft">Get Involved 🤝</h2>
+        <p class="animate__animated animate__fadeIn">We welcome contributions! Whether you're fixing bugs, improving documentation, or proposing new features, your input is valuable.</p>
+        <a href="https://github.com/Esmail-sarhadi/Q-Interpreter" class="btn animate__animated animate__pulse" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+        
+        <h2 class="animate__animated animate__fadeInLeft">Support the Project 💖</h2>
+        <p class="animate__animated animate__fadeIn">If you find Q+ Interpreter helpful, consider making a donation to support its development:</p>
+        <a href="https://nowpayments.io/donation?api_key=REWCYVC-A1AMFK3-QNRS663-PKJSBD2&source=lk_donation&medium=referral" class="btn animate__animated animate__pulse" target="_blank"><i class="fas fa-heart"></i> Donate Now</a>
+        
+        <h2 class="animate__animated animate__fadeInLeft">Connect With Me 🌐</h2>
+        <p class="animate__animated animate__fadeIn">Check out my other projects and get in touch:</p>
+        <a href="https://github.com/Esmail-sarhadi" class="btn animate__animated animate__pulse" target="_blank"><i class="fab fa-github"></i> GitHub Profile</a>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-    <script>anchors.add();</script>
-  </body>
-</html>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
