@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="vqq11CWNVkLVnZvjCeZReKc8-FRmgxek2SOWjr35CbY" />
+    <link rel="shortcut icon" type="image/png" href="android-chrome-512x512.png">
+    
+    <title>مفسر Q+: ماشین حساب پیشرفته پست‌فیکس 🧮 | اسماعیل سرحدی</title>
+    <meta name="description" content="کاوش در مفسر Q+: یک ماشین حساب قدرتمند مبتنی بر پایتون با نشانه‌گذاری پست‌فیکس. دارای عملیات ریاضی، توابع مثلثاتی و ذخیره‌سازی متغیر. 🚀">
+    <meta name="keywords" content="مفسر Q+, نشانه‌گذاری پست‌فیکس, ماشین حساب, پایتون, مبتنی بر پشته, عملیات ریاضی">
+    <meta name="author" content="اسماعیل سرحدی">
+    
+    <meta property="og:title" content="مفسر Q+: ماشین حساب پیشرفته پست‌فیکس 🧮">
+    <meta property="og:description" content="کاوش در مفسر Q+: یک ماشین حساب قدرتمند مبتنی بر پایتون با قابلیت‌های ریاضی پیشرفته. 🚀">
+    <meta property="og:image" content="https://esmail-sarhadi.github.io/Q-Interpreter/q-interpreter-og-image.png">
+    <meta property="og:url" content="https://esmail-sarhadi.github.io/Q-Interpreter/">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="مفسر Q+: ماشین حساب پیشرفته پست‌فیکس 🧮">
+    <meta name="twitter:description" content="کاوش در مفسر Q+: یک ماشین حساب قدرتمند مبتنی بر پایتون با نشانه‌گذاری پست‌فیکس. دارای عملیات ریاضی، توابع مثلثاتی و بیشتر! 🚀">
+    <meta name="twitter:image" content="https://esmail-sarhadi.github.io/Q-Interpreter/q-interpreter-twitter-image.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 30px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .feature-list li {
+            margin-bottom: 10px;
+            padding-right: 25px;
+            position: relative;
+        }
+        .feature-list li:before {
+            content: '🔹';
+            position: absolute;
+            right: 0;
+        }
+        .example-code {
+            background-color: #f4f4f4;
+            border-right: 3px solid #2980b9;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            text-align: left;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .icon-feature {
+            font-size: 1.2em;
+            margin-left: 10px;
+            color: #3498db;
+        }
+        .language-switch {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 5px 10px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .language-switch img {
+            transition: transform 0.3s ease;
+        }
+        .language-switch img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="language-switch">
+        <span style="font-size: 1.2em; font-weight: bold; margin-left: 10px;">زبان</span>
+        <a href="index.html" style="text-decoration: none; margin: 0 5px;">
+            <img src="https://flagcdn.com/w40/gb.png" width="30" alt="English">
+        </a>
+        <a href="index_fa.html" style="text-decoration: none; margin: 0 5px;">
+            <img src="https://flagcdn.com/w40/ir.png" width="30" alt="Persian">
+        </a>
+    </div>
+    
+    <div class="container">
+        <h1 class="animate__animated animate__fadeInDown">مفسر Q+ 🧮</h1>
+        <p class="animate__animated animate__fadeIn">به مفسر Q+ خوش آمدید، یک ماشین حساب قدرتمند مبتنی بر پایتون که از نشانه‌گذاری پست‌فیکس (نشانه‌گذاری لهستانی معکوس) برای انجام عملیات مختلف ریاضی استفاده می‌کند. 🚀</p>
+        
+        <h2 class="animate__animated animate__fadeInLeft">ویژگی‌ها 🌟</h2>
+        <ul class="feature-list animate__animated animate__fadeInRight">
+            <li><i class="fas fa-plus-minus icon-feature"></i>عملیات ریاضی پایه</li>
+            <li><i class="fas fa-square-root-variable icon-feature"></i>توابع ریاضی پیشرفته</li>
+            <li><i class="fas fa-superscript icon-feature"></i>محاسبات مثلثاتی</li>
+            <li><i class="fas fa-database icon-feature"></i>ذخیره‌سازی و استفاده از متغیرها</li>
+            <li><i class="fas fa-code icon-feature"></i>پیاده‌سازی توابع سفارشی</li>
+        </ul>
+        
+        <h2 class="animate__animated animate__fadeInLeft">چگونه کار می‌کند 🔍</h2>
+        <p class="animate__animated animate__fadeIn">مفسر Q+ از یک پشته برای ارزیابی عبارات پست‌فیکس استفاده می‌کند، پشتیبانی از:</p>
+        <ul class="feature-list animate__animated animate__fadeInRight">
+            <li>افزودن اعداد به پشته</li>
+            <li>اجرای عملیات</li>
+            <li>اختصاص متغیرها</li>
+            <li>ارزیابی عبارات</li>
+        </ul>
+        
+        <h2 class="animate__animated animate__fadeInLeft">مثال استفاده 💻</h2>
+        <div class="example-code animate__animated animate__fadeIn">
+            <pre><code>> 3 4 +
+پشته بعد از '3': [3.0]
+پشته بعد از '4': [3.0, 4.0]
+پشته بعد از '+': [7.0]
+نتیجه: 7.0
+
+> x 5 =
+متغیر x مقدار: 5.0 اختصاص داده شد
+
+> x 3 *
+پشته بعد از 'x': [5.0]
+پشته بعد از '3': [5.0, 3.0]
+پشته بعد از '*': [15.0]
+نتیجه: 15.0
+
+> 90 sin
+پشته بعد از '90': [90.0]
+پشته بعد از 'sin': [1.0]
+نتیجه: 1.0</code></pre>
+        </div>
+        
+        <h2 class="animate__animated animate__fadeInLeft">درگیر شوید 🤝</h2>
+        <p class="animate__animated animate__fadeIn">ما از مشارکت‌ها استقبال می‌کنیم! چه در حال رفع باگ‌ها، بهبود مستندات یا پیشنهاد ویژگی‌های جدید باشید، ورودی شما ارزشمند است.</p>
+        <a href="https://github.com/Esmail-sarhadi/Q-Interpreter" class="btn animate__animated animate__pulse" target="_blank"><i class="fab fa-github"></i> مشاهده در گیت‌هاب</a>
+        
+        <h2 class="animate__animated animate__fadeInLeft">پشتیبانی از پروژه 💖</h2>
+        <p class="animate__animated animate__fadeIn">اگر مفسر Q+ را مفید می‌دانید، لطفاً با یک کمک مالی برای توسعه آن پشتیبانی کنید:</p>
+        <a href="https://nowpayments.io/donation?api_key=REWCYVC-A1AMFK3-QNRS663-PKJSBD2&source=lk_donation&medium=referral" class="btn animate__animated animate__pulse" target="_blank"><i class="fas fa-heart"></i> همین حالا کمک کنید</a>
+        
+        <h2 class="animate__animated animate__fadeInLeft">ارتباط با من 🌐</h2>
+        <p class="animate__animated animate__fadeIn">پروژه‌های دیگر من را بررسی کنید و با من در تماس باشید:</p>
+        <a href="https://github.com/Esmail-sarhadi" class="btn animate__animated animate__pulse" target="_blank"><i class="fab fa-github"></i> پروفایل گیت‌هاب</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+</html>
